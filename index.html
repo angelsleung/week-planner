@@ -14,18 +14,45 @@
     <div class="row">
       <button class="add-button">Add Entry</button>
     </div>
-    <div class="modal">
-      <h2>Add Entry</h2>
-      <form>
-        <select>
-          <option value=""></option>
-
-        </select>
-      </form>
+    <div class="background">
+      <div class="modal">
+        <h2>Add Entry</h2>
+        <form>
+          <select name="day-of-week" id="week-select">
+            <option value="">Day of Week</option>
+            <option value="Sunday">Sunday</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+          </select>
+          <select name="time" id="time">
+            <option value="">Time</option>
+            <option value="">1:00</option>
+            <option value="">2:00</option>
+            <option value="">3:00</option>
+            
+            <option value="">4:00</option>
+            <option value="">5:00</option>
+            <option value="">6:00</option>
+            <option value="">7:00</option>
+            <option value="">8:00</option>
+            <option value="">9:00</option>
+            <option value="">10:00</option>
+            <option value="">11:00</option>
+            <option value="">12:00</option>
+          </select>
+          <div class="text-area-container">
+            <textarea placeholder="Description"></textarea>
+          </div>
+          <div class ="submit-container">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
     </div>
-
   </div>
-
   <script src="main.js"></script>
 </body>
 </html>
