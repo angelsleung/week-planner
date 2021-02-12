@@ -26,17 +26,20 @@
       <button class="add-button">Add Entry</button>
     </div>
 
-    <h2>Scheduled Events</h2>
+    <h2 class="modal-title">Scheduled Events</h2>
     <table class="schedule">
       <thead>
         <tr>
           <th>Time</th>
           <th>Description</th>
+
         </tr>
       </thead>
       <tbody>
+
         <tr>
           <td>10:00</td>
+
           <td>Code</td>
         </tr>
         <tr>
@@ -54,13 +57,13 @@
       </tbody>
     </table>
 
-    <div class="background hidden">
-      <div class="modal hidden">
+    <div class="background-off">
+      <div class="modal">
         <div class="modal-title">
           <h2>Add Entry</h2>
         </div>
         <form>
-          <select name="day-of-week" id="week-select" class="week">
+          <select name="day-of-week" id="week-select" class="day-of-week">
             <option value="">Day of Week</option>
             <option value="Sunday">Sunday</option>
             <option value="Monday">Monday</option>
@@ -92,7 +95,6 @@
           </div>
         </form>
       </div>
-
     </div>
   </div>
 
