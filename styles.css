@@ -16,7 +16,7 @@ body {
 .row {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
 .planner-title {
@@ -35,11 +35,11 @@ body {
   background-color: #94bbf2;
 }
 
-.background-off {
+.hidden {
   display: none;
 }
 
-/* .background {
+.background {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -48,8 +48,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgb(0, 0, 0, 0.8);
-  display: none;
-} */
+}
 
 .modal {
   background-color: white;
@@ -86,6 +85,13 @@ body {
   padding-top: 0.5rem;
 }
 
-/* .planner-title, .add-button {
-  margin: 0 auto;
-} */
+.day-buttons-div {
+  display: flex;
+  width: 100%;
+  border: 1px solid purple;
+}
+
+.day-button {
+  width: 5rem;
+  height: 5rem;
+}
