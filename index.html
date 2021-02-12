@@ -11,14 +11,30 @@
     <div class="row">
       <h1 class="planner-title">Weekly Planner</h1>
     </div>
+
+    <div class="week-btn row">
+      <ul>
+        <li><button>Sunday</button></li>
+        <li><button>Monday</button></li>
+        <li><button>Tuesday</button></li>
+        <li><button>Wednesday</button></li>
+        <li><button>Thursday</button></li>
+        <li><button>Friday</button></li>
+        <li><button>Saturday</button></li>
+      </ul>
+    </div>
+
     <div class="row">
       <button class="add-button">Add Entry</button>
     </div>
+
     <div class="background">
       <div class="modal">
-        <h2>Add Entry</h2>
+        <div class="modal-title">
+          <h2>Add Entry</h2>
+        </div>
         <form>
-          <select name="day-of-week" id="week-select">
+          <select name="day-of-week" id="week-select" class="week">
             <option value="">Day of Week</option>
             <option value="Sunday">Sunday</option>
             <option value="Monday">Monday</option>
@@ -32,7 +48,6 @@
             <option value="">1:00</option>
             <option value="">2:00</option>
             <option value="">3:00</option>
-            
             <option value="">4:00</option>
             <option value="">5:00</option>
             <option value="">6:00</option>
@@ -44,15 +59,17 @@
             <option value="">12:00</option>
           </select>
           <div class="text-area-container">
-            <textarea placeholder="Description"></textarea>
+            <textarea placeholder="Description" class="textarea" cols="30" rows="8"></textarea>
           </div>
           <div class ="submit-container">
             <button type="submit">Submit</button>
           </div>
         </form>
       </div>
+
     </div>
   </div>
+
   <script src="main.js"></script>
 </body>
 </html>
