@@ -18,7 +18,9 @@ function submitEntry(event) {
   newEntry.description = $form.elements.description.value;
   // newEntry.time
   // console.log(newEntry);
-  planner.push(newEntry);
+  // planner.push(newEntry);
+  $addEntrySwitch.className = 'background-off';
+  $form.reset();
 }
 
 $submitBtn.addEventListener('click', submitEntry);
