@@ -19,8 +19,18 @@ function submitEntry(event) {
   // newEntry.time
   // console.log(newEntry);
   // planner.push(newEntry);
+  checkDay(newEntry);
   $addEntrySwitch.className = 'background-off';
   $form.reset();
 }
 
 $submitBtn.addEventListener('click', submitEntry);
+
+function checkDay(day) {
+  for (var i = 0; i < planner.length; i++) {
+    if (planner[i].day === day.dayOfWeek) {
+      planner[i].time.push(day.time);
+      planner[i].description.push(day.description);
+    }
+  }
+};
