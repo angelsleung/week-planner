@@ -34,3 +34,11 @@ function checkDay(day) {
     }
   }
 };
+
+var $dayButton = document.querySelector(".day-buttons-div");
+
+function handleViewSchedule(event){
+  console.log(event.target.value);
+}
+
+$dayButton.addEventListener('click', handleViewSchedule);
