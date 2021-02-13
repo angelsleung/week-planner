@@ -33,12 +33,28 @@ function checkDay(day) {
       planner[i].description.push(day.description);
     }
   }
-};
+}
 
-var $dayButton = document.querySelector(".day-buttons-div");
+var $dayButton = document.querySelector('.day-buttons-div');
 
-function handleViewSchedule(event){
-  console.log(event.target.value);
+function handleViewSchedule(event) {
+  var dayOfWeek = event.target.textContent;
+  for (var i = 0; i < planner.length; i++) {
+    if (planner[i].day === dayOfWeek) {
+      renderEntry(planner[i]);
+    }
+  }
+  console.log(event.target.textContent);
+}
+
+function renderEntry(dayOfWeek) {
+
+  var tableRow = document.createElement('tr');
+  var tableDataTime = document.createElement('td');
+  tableRow.append(tableDataTime);
+
+  var tableDataDescription = document.createElement('td');
+  tableRow.append(tableDataDescription);
 }
 
 $dayButton.addEventListener('click', handleViewSchedule);
