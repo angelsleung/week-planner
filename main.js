@@ -9,8 +9,7 @@ $entryButton.addEventListener('click', addEntry);
 
 var $submitBtn = document.querySelector('.submit-btn');
 var $form = document.querySelector('form');
-
-var $tBody = document.querySelector('tbody');
+var $table = document.querySelector('.schedule');
 
 function submitEntry(event) {
   event.preventDefault();
@@ -19,9 +18,6 @@ function submitEntry(event) {
   newEntry.time = $form.elements.time.value;
   newEntry.description = $form.elements.description.value;
   console.log("newEntry", newEntry);
-  // newEntry.time
-  // console.log(newEntry);
-  // planner.push(newEntry);
   checkDay(newEntry);
   $addEntrySwitch.className = 'background-off';
   $form.reset();
@@ -45,17 +41,27 @@ function handleViewSchedule(event) {
   var dayOfWeek = event.target.textContent;
   for (var i = 0; i < planner.length; i++) {
     if (planner[i].day === dayOfWeek) {
-
+      // tableBody.remove();
       renderEntry(planner[i]);
+
     }
+
   }
   }
 }
 
+
 function renderEntry(dayOfWeek) {
+  var tableBody = document.createElement('tbody');
+
   for (var j = 0; j < dayOfWeek.time.length; j++) {
+
     var tableRow = document.createElement('tr');
+
+    tableBody.appendChild(tableRow);
+
     var tableDataTime = document.createElement('td');
+
     tableDataTime.textContent = dayOfWeek.time[j];
     console.log("dayOfWeek.time[j]);",dayOfWeek.time[j]);
 
@@ -66,7 +72,8 @@ function renderEntry(dayOfWeek) {
     console.log("dayOfWeek.description[j]",dayOfWeek.description[j]);
 
     tableRow.append(tableDataDescription);
-    $tBody.append(tableRow);
   }
+  $table.append(tableBody);
 }
+
 $dayButton.addEventListener('click', handleViewSchedule);
